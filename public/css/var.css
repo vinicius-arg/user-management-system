@@ -1,0 +1,9 @@
+:root{
+    --black: #000;
+    --gray: #808080;
+    --light-gray: #dbdbdb;
+    --medium-gray: #444;
+    --dark-gray: #222;
+    --white: #fff;
+    --time: 100ms;
+}

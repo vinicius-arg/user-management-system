@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar usuário</title>
+    <link rel="shortcut icon" href="/assets/user.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/var.css">
+    <link rel="stylesheet" href="/css/create.css">
+</head>
+<body>
+    <section class="container">
+        <h1>Criar novo usuário</h1>
+        <form autocomplete="off" action="/main/create" method="post">
+            <input name="name" type="text" placeholder="Nome" required>
+            <input name="email" type="email" placeholder="Email" required>
+            <div class="pass">
+                <input name="pwd" type="password" placeholder="Senha" required>
+                <img class="viewer" src="/assets/view.png" alt="View">
+            </div>
+            <!-- <input id="submit" type="submit"> -->
+            <input type="submit">
+            <% if (message) { %>
+                <p <% if (message.sucess) { %>
+                      style="color: green;"
+                   <% } else { %>
+                      style="color: red"
+                   <% } %> > <%= message.msg %> </p>
+            <% } %>  
+        </form>
+    </section>
+
+    <footer>
+        <a href="/main">Retornar à página de busca</a>
+    </footer>
+    <script src="/scripts/create.js"></script>
+</body>
+</html>

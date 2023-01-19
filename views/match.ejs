@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/var.css">
+    <link rel="stylesheet" href="/css/match.css">
+</head>
+<body>
+    <h1>Resultados da busca por: <%= search %></h1>
+    <% if (!users.length) { %>
+        <p>Não há correspondências.</p>
+    <% } %>  
+    <% for (user of users) { %> 
+        <div class="container">
+            <a class="name" href="/user/<%= user.name %>">
+                <h2> <%= user.name %> </h2>
+            </a>
+            <p> <%= user.email %> </p>
+            <p>Visualizações: <%= user.views %> </p>
+        </div>
+    <% } %> 
+
+    <footer>
+        <a href="/main">Retornar à página de busca</a>
+        <p>ou...</p>
+        
+        <a href="/main/create">Criar usuário</a>
+    </footer>
+</body>
+</html>
