@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const url = "mongodb://localhost/e-commerce";
+const url = "mongodb://localhost/ums";
 
 async function mongoConnect (authSource, user, pass) {
     try {
